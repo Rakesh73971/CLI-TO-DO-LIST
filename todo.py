@@ -49,6 +49,7 @@ def add_task(tasks):
         if len(task) != 0:
             tasks.append(task)
             save_tasks(tasks)
+            print("Task Added successfully!")
             break
         else:
             print('Invalid task')
@@ -61,7 +62,7 @@ def remove_task(tasks):
             if 1 <= task_number <= len(tasks):
                 removed = tasks.pop(task_number-1)
                 save_tasks(tasks)
-                print(f"{removed} removed successfully")
+                print(f"{removed} removed successfully!")
                 break
             else:
                 print('Invalid task number')
